@@ -1,11 +1,4 @@
-FROM python:3.10-alpine
-
-RUN apk add --update --no-cache \
-        tzdata \
-    & pip install --no-cache-dir \
-        pychromecast \
-        flask \
-        gtts
+FROM python:3.10.6-slim-bullseye
 
 ENV SERVER_HOST=0.0.0.0
 ENV SERVER_PORT=5257
@@ -14,6 +7,11 @@ ENV DEFAULT_LANG=ja
 ENV TMP_DIR=/tmp/google-homed
 ENV NIGHT_HOURS=1,2,3,4,5,6
 
-COPY entrypoint.py /entrypoint.py
+RUN pip install --no-cache-dir \
+      pychromecast \
+      flask \
+      gtts
+
+COPY entrypoint.py /
 
 ENTRYPOINT ["python", "-u", "/entrypoint.py"]

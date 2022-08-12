@@ -1,7 +1,6 @@
 # google-homed
-📢 Simple API server daemon for Google Home; Let it Speak from API
 
-[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/slashnephy/google-homed/latest)](https://hub.docker.com/r/slashnephy/google-homed)
+📢 Simple API server daemon for Google Home; Let it Speak from API
 
 `docker-compose.yml`
 
@@ -11,7 +10,7 @@ version: '3.8'
 services:
   google_homed:
     container_name: google-homed
-    image: slashnephy/google-homed:latest
+    image: ghcr.io/slashnephy/google-homed:master
     restart: always
     network_mode: host
     expose:
