@@ -1,4 +1,4 @@
-FROM python:3.10.6-slim-bullseye
+FROM python:3.11.2-slim-bullseye
 
 ENV SERVER_HOST=0.0.0.0
 ENV SERVER_PORT=5257
