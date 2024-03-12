@@ -1,4 +1,4 @@
-FROM python:3.11.5-slim-bullseye@sha256:de917502e531b3f6e4a5acef017e9feef392cf3eb76826fd46d6810c70ae9b5e
+FROM python:3.12.2-slim-bullseye@sha256:c66cf219ac0083a9af2ff90e16530f16cd503c59eb7909feb3b8f3524dc1a87e
 
 ENV SERVER_HOST=0.0.0.0
 ENV SERVER_PORT=5257
